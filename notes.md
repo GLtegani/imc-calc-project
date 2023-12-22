@@ -1,0 +1,1 @@
+Eu tenho que primeiro construir o HTML e CSS da minha página ou de algum conteúdo, para depois adicionar o javascript, isso para deixar mais visível o que eu preciso dar o dinamismo e a função, tornando assim mais fácil o código.
