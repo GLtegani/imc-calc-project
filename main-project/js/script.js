@@ -1,4 +1,4 @@
-import { Modal } from './modal.js';
+import { showResultMessage } from './modal.js';
 import { AlertError } from './validateNumber.js';
 import { calcImc, notNumber } from './utils.js';
 
@@ -10,19 +10,10 @@ const DatesForm = {
 
 };
 
+// functions
 
-const closeErrorBoxOnType = () => {
-   DatesForm.inputWeight.oninput = () => AlertError.close();
-   DatesForm.inputHeight.oninput = () => AlertError.close();
-};
-
-
-const showResultMessage = result => {
-   const message = `Seu IMC é de ${result}`;
-   Modal.message.innerText = message;
-   Modal.open();
-};
-
+// ao escrever "on", eu adiciono diversas opções a serem acessadas no javascript 
+// utilizando DOM
 DatesForm.form.onsubmit = (event) => {
    // Evite o padrão
    event.preventDefault();
@@ -33,6 +24,7 @@ DatesForm.form.onsubmit = (event) => {
    
    if(alertErrorCondition) {
       AlertError.open();
+      // o return é pra finalizar a execução e executala até aqui
       return;
    };
    
@@ -40,7 +32,15 @@ DatesForm.form.onsubmit = (event) => {
    showResultMessage(resultIMC);
 };
 
+const closeErrorBoxOnType = () => {
+   // ao escrever "on", eu adiciono diversas opções a serem acessadas no javascript 
+   // utilizando DOM
+   DatesForm.inputWeight.oninput = () => AlertError.close();
+   DatesForm.inputHeight.oninput = () => AlertError.close();
+};
+
+
 closeErrorBoxOnType();
 
-
+// end functions
 
