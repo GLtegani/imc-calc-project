@@ -1,75 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <!-- preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- preconnect -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <!-- meta -->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Bmi Calculator</title>
+   <title>Imc Calculator</title>
    <!-- styles -->
    <link rel="stylesheet" href="style2.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <!-- scripts -->
-   <script src="./script2.js" type="module" defer></script>
+   <script src="./js/script2.js" type="module" defer></script>
 </head>
 <body>
-   <!-- alert error message -->
+   <!-- Starting code -->
+
    <div class="alert-error">
-      Enter numbers only
+      Digite somente números
    </div>
 
-   <!-- main container-->
-   <div id="page-container">
-      <!-- card -->
-      <main class="card">
-         <!-- BMI info form -->
-         <form> 
-            <h1 class="title">
-               BMI calculation
-            </h1>
+   <!-- Starting container -->
 
+   <div class="container">
+      <!-- Start first card -->
+      <main class="card">
+         <form action="">
+            <h1 class="title">Cálculo de IMC</h1>
             <div class="input-wrapper">
-               <label for="weight">
-                  Weight (kg)
-               </label>
+               <label for="weight">Peso (kg)</label>
                <input 
                   id="weight" 
-                  type="text" 
+                  type="text"
                   placeholder="60">
             </div>
-         
+
             <div class="input-wrapper">
-               <label for="height">
-                  Height (m)
-               </label>
+               <label for="height">Altura (m)</label>
                <input 
-                  id="height"    
-                  type="text" 
+                  id="height" 
+                  type="text"
                   placeholder="1.65">
             </div>
-            
-            <button class="calc-bmi">
-               BMI Calculate
-               <img src="../main-project/assets/arrow-forward-sharp.svg" alt="arrow pointing to the right">
+
+            <button class="imc-calc" type="submit">
+               Calcular IMC
+               <img src="../main-project/assets/arrow-forward-sharp.svg" alt="Seta apontando para direita.">
             </button>
          </form>
       </main>
+      <!-- End first card -->
    </div>
 
-   <!-- show results container -->
+   <!-- End container -->
+
+   <!-- Start second card -->
    <div class="modal-wrapper">
       <div class="modal card">
          <h2 class="title">
+
             <button class="close">
                <img src="../main-project/assets/close-sharp.svg" 
-               alt="image to close popup">
+               alt="Imagem para fechar o popup.">
             </button>
-
-            <span class="result"></span>
+            
+            <span></span>
          </h2>
+
       </div>
    </div>
+   <!-- End second card -->
 </body>
 </html>
